@@ -18,12 +18,6 @@ var theUrl = "https://api.efortuna.ro/live3/api/live/matches/overview";
 
 // fetch(theUrl).then(res=>res.json()).then(data=>console.log(data));
 
-// API for get requests
-let fetchRes = fetch(
-    "https://api.efortuna.ro/live3/api/live/matches/overview");
-// fetchRes is the promise to resolve
-// it by using.then() method
-fetchRes.then(res =>
-    res).then(d => {
-        console.log(d)
-    })
+fetch("https://api.efortuna.ro/live3/api/live/matches/overview").then(res => res).then(d => {
+    console.log(d.json())
+});
