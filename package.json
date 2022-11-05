@@ -1,0 +1,18 @@
+{
+  "name": "odsscraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "main": "node js/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "puppeteer": "^19.2.2"
+  }
+}
