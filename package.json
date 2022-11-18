@@ -2,7 +2,7 @@
   "name": "odsscraper",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "node js/main.js",
   "scripts": {
     "main": "node js/main.js"
   },
