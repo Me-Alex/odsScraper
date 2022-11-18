@@ -14,9 +14,9 @@ var theUrl = "https://api.efortuna.ro/live3/api/live/matches/overview";
 
 // httpGet(theUrl);
 
-let efortunaUrl = "https://sheltered-hollows-94570.herokuapp.com/efortuna";
-let betanoUrl = "https://sheltered-hollows-94570.herokuapp.com/betano";
-let betanoUrl1 = "https://sheltered-hollows-94570.herokuapp.com/betano1";
+let efortunaUrl = "https://sheltered-hollows-94570.herokuapp.com/efortuna/";
+let betanoUrl = "https://sheltered-hollows-94570.herokuapp.com/betano/";
+let betanoUrl1 = "https://sheltered-hollows-94570.herokuapp.com/betano1/";
 
 var asta;
 
@@ -24,11 +24,11 @@ var asta;
 //efortuna
 fetch(efortunaUrl).then(res => res.json()).then((data) => {
     console.log("EFORTUNA");
-    // var vreauJSON = {
+    var vreauJSON = {
 
-    // };
-    // vreauJSON = JSON.parse(data);
-    console.log(data);
+    };
+    vreauJSON = JSON.parse(data);
+    console.log(vreauJSON);
 
 });
 fetch(betanoUrl1).then(res => res.json()).then((data) => {
@@ -36,29 +36,27 @@ fetch(betanoUrl1).then(res => res.json()).then((data) => {
     var vreauJSON = {
 
     };
-    vreauJSON = JSON.stringify(data);
-    vreauJSON = JSON.parse(vreauJSON);
+    vreauJSON = JSON.parse(data);
     console.log(vreauJSON.data);
 
 });
 //betano
 fetch(betanoUrl).then(res => res.json()).then((data) => {
     console.log("BETANO");
-    // var vreauJSON = {
+    var vreauJSON = {
 
-    // };
-    // vreauJSON = JSON.stringify(data);
-    // vreauJSON = JSON.parse(vreauJSON);
-    console.log(data.data);
+    };
+    vreauJSON = JSON.parse(data);
+    console.log(vreauJSON.data);
 
-    vreauJSON = data.data.blocks;
+    vreauJSON = vreauJSON.data.blocks;
 
 
     let body = document.querySelector('body');
 
     let copyContainer = document.querySelector('.container');
     copyContainer.outerHTML = "";
-    fetch("https://sheltered-hollows-94570.herokuapp.com/link").then(res => res.json()).then((linkData) => {
+    fetch("https://sheltered-hollows-94570.herokuapp.com/link/").then(res => res.json()).then((linkData) => {
         console.log("link");
         console.log(linkData);
         for (let i = 0; i < linkData.link.length; i++) {
