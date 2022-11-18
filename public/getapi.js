@@ -37,17 +37,17 @@ fetch(betanoUrl1).then(res => res.json()).then((data) => {
 
     };
     vreauJSON = data;
-    console.log(vreauJSON.data);
+    console.log(vreauJSON);
 
 });
 //betano
-fetch(betanoUrl).then(res => res.json()).then((data) => {
+fetch(betanoUrl).then(res => res.json()).then((data1) => {
     console.log("BETANO");
     var vreauJSON = {
 
     };
-    vreauJSON = data;
-    console.log(vreauJSON.data);
+    vreauJSON = data1;
+    console.log(vreauJSON);
 
     vreauJSON = vreauJSON.data.blocks;
 
