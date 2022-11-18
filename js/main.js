@@ -82,27 +82,27 @@ function showToFrontEnd() {
 
 
                 let d = data;
-                vreauJSON1 = d;
-                vreauJSON1 = JSON.parse(vreauJSON1);
-                let nr = 0;
-                for (let i = 0; i < vreauJSON1.data.blocks.length; i++) {
-                    for (let j = 0; j < vreauJSON1.data.blocks[i].events.length; j++) {
-                        //mai jos recuperez lincul pentru nicun pariu pe egal
-                        let UrlPariuEgal = "https://ro.betano.com/api";
-                        let UrlNiciunPariuPeEgal = vreauJSON1.data.blocks[i].events[j].url;
-                        // console.log(UrlNiciunPariuPeEgal);
-                        // if (UrlNiciunPariuPeEgal != null) {
-                        UrlNiciunPariuPeEgal = UrlPariuEgal + UrlNiciunPariuPeEgal;
-                        links.link[nr++] = UrlNiciunPariuPeEgal;
-                        links.i[nr] = i;
-                        links.j[nr] = j;
-                        // }
+                // vreauJSON1 = d;
+                // vreauJSON1 = JSON.parse(vreauJSON1);
+                // let nr = 0;
+                // for (let i = 0; i < vreauJSON1.data.blocks.length; i++) {
+                //     for (let j = 0; j < vreauJSON1.data.blocks[i].events.length; j++) {
+                //         //mai jos recuperez lincul pentru nicun pariu pe egal
+                //         let UrlPariuEgal = "https://ro.betano.com/api";
+                //         let UrlNiciunPariuPeEgal = vreauJSON1.data.blocks[i].events[j].url;
+                //         // console.log(UrlNiciunPariuPeEgal);
+                //         // if (UrlNiciunPariuPeEgal != null) {
+                //         UrlNiciunPariuPeEgal = UrlPariuEgal + UrlNiciunPariuPeEgal;
+                //         links.link[nr++] = UrlNiciunPariuPeEgal;
+                //         links.i[nr] = i;
+                //         links.j[nr] = j;
+                //         // }
 
-                    }
-                }
-                // console.log(vreauJSON1.data.blocks[1].events[1].markets[0].selections[0].price);
-                console.log(vreauJSON1.data.blocks[1].events[0].url);
-                console.log(links);
+                //     }
+                // }
+                // // console.log(vreauJSON1.data.blocks[1].events[1].markets[0].selections[0].price);
+                // console.log(vreauJSON1.data.blocks[1].events[0].url);
+                // console.log(links);
 
                 res.json(data);
             });
