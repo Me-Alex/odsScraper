@@ -14,9 +14,9 @@ var theUrl = "https://api.efortuna.ro/live3/api/live/matches/overview";
 
 // httpGet(theUrl);
 
-let efortunaUrl = "https://odds--scraper.herokuapp.com/efortuna/";
-let betanoUrl = "https://odds--scraper.herokuapp.com/betano/";
-let betanoUrl1 = "https://odds--scraper.herokuapp.com/betano1/";
+let efortunaUrl = "https://sheltered-hollows-94570.herokuapp.com/efortuna/";
+let betanoUrl = "hhttps://sheltered-hollows-94570.herokuapp.com/betano/";
+let betanoUrl1 = "https://sheltered-hollows-94570.herokuapp.com/betano1/";
 
 var asta;
 
@@ -56,11 +56,11 @@ fetch(betanoUrl).then(res => res.json()).then((data) => {
 
     let copyContainer = document.querySelector('.container');
     copyContainer.outerHTML = "";
-    fetch("https://odds--scraper.herokuapp.com/link/").then(res => res.json()).then((linkData) => {
+    fetch("https://sheltered-hollows-94570.herokuapp.com/link/").then(res => res.json()).then((linkData) => {
         console.log("link");
         console.log(linkData);
         for (let i = 0; i < linkData.link.length; i++) {
-            var link = "http://localhost:3000/links" + i;
+            var link = "https://sheltered-hollows-94570.herokuapp.com/links" + i;
             // console.log('am intrat aici ' + link);
             fetch(link).then(res => res.json()).then((ddata) => {
                 if (i == linkData.link.length - 1) {
