@@ -110,7 +110,7 @@ fetch(betanoUrl).then(res => res.json()).then((data) => {
 
 
 
-
+//gfsgs
 
 
 // let vreauJson=returnThis();
