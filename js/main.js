@@ -160,7 +160,7 @@ function showToFrontEnd() {
 
 }
 
-app.listen(process.env.PORT || 3000, () => console.log("localhost:3000"));
+app.listen(process.env.PORT || 3000, () => console.log(process.env.PORT));
 
 showToFrontEnd();
 

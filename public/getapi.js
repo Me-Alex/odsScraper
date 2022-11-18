@@ -27,7 +27,7 @@ fetch(efortunaUrl).then(res => res.json()).then((data) => {
     var vreauJSON = {
 
     };
-    vreauJSON = JSON.parse(data);
+    vreauJSON = data;
     console.log(vreauJSON);
 
 });
@@ -36,7 +36,7 @@ fetch(betanoUrl1).then(res => res.json()).then((data) => {
     var vreauJSON = {
 
     };
-    vreauJSON = JSON.parse(data);
+    vreauJSON = data;
     console.log(vreauJSON.data);
 
 });
@@ -46,7 +46,7 @@ fetch(betanoUrl).then(res => res.json()).then((data) => {
     var vreauJSON = {
 
     };
-    vreauJSON = JSON.parse(data);
+    vreauJSON = data;
     console.log(vreauJSON.data);
 
     vreauJSON = vreauJSON.data.blocks;
