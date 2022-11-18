@@ -36,7 +36,7 @@ fetch(betanoUrl1).then(res => res.json()).then((data) => {
     var vreauJSON = {
 
     };
-    vreauJSON= JSON.stringify(data);
+    vreauJSON = JSON.stringify(data);
     vreauJSON = JSON.parse(vreauJSON);
     console.log(vreauJSON.data);
 
@@ -47,7 +47,8 @@ fetch(betanoUrl).then(res => res.json()).then((data) => {
     var vreauJSON = {
 
     };
-    vreauJSON = JSON.parse(data);
+    vreauJSON = JSON.stringify(data);
+    vreauJSON = JSON.parse(vreauJSON);
     console.log(vreauJSON.data);
 
     vreauJSON = vreauJSON.data.blocks;
