@@ -14,7 +14,7 @@
 
 // // httpGet(theUrl);
 
-let efortunaUrl = "http://localhost:3000/efortuna/";
+let efortunaUrl = "https://odds--scraper.herokuapp.com/efortuna/";
 // let betanoUrl = "http://localhost:3000/betano/";
 // let betanoUrl1 = "http://localhost:3000/betano1/";
 
