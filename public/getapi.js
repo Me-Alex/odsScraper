@@ -15,7 +15,7 @@ var theUrl = "https://api.efortuna.ro/live3/api/live/matches/overview";
 // httpGet(theUrl);
 
 let efortunaUrl = "https://sheltered-hollows-94570.herokuapp.com/efortuna/";
-let betanoUrl = "hhttps://sheltered-hollows-94570.herokuapp.com/betano/";
+let betanoUrl = "https://sheltered-hollows-94570.herokuapp.com/betano/";
 let betanoUrl1 = "https://sheltered-hollows-94570.herokuapp.com/betano1/";
 
 var asta;
