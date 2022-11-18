@@ -31,15 +31,15 @@ fetch(efortunaUrl).then(res => res.json()).then((data) => {
     console.log(vreauJSON);
 
 });
-// fetch(betanoUrl1).then(res => res.json()).then((data) => {
-//     console.log("betano1");
-//     var vreauJSON = {
+fetch(betanoUrl1).then(res => res.json()).then((data) => {
+    console.log("betano1");
+    var vreauJSON = {
 
-//     };
-//     vreauJSON = JSON.parse(data);
-//     console.log(vreauJSON.data);
+    };
+    vreauJSON = JSON.parse(data);
+    console.log(vreauJSON.data);
 
-// });
+});
 //betano
 fetch(betanoUrl).then(res => res.json()).then((data) => {
     console.log("BETANO");
@@ -60,7 +60,7 @@ fetch(betanoUrl).then(res => res.json()).then((data) => {
         console.log("link");
         console.log(linkData);
         for (let i = 0; i < linkData.link.length; i++) {
-            var link = "https://odds--scraper.herokuapp.com/links" + i;
+            var link = "http://localhost:3000/links" + i;
             // console.log('am intrat aici ' + link);
             fetch(link).then(res => res.json()).then((ddata) => {
                 if (i == linkData.link.length - 1) {
