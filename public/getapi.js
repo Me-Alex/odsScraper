@@ -61,7 +61,7 @@ fetch(betanoUrl).then(res => res.json()).then((data) => {
         console.log(linkData);
         for (let i = 0; i < linkData.link.length; i++) {
             var link = "http://localhost:3000/links" + i;
-            console.log('am intrat aici ' + link);
+            // console.log('am intrat aici ' + link);
             fetch(link).then(res => res.json()).then((ddata) => {
                 if (i == linkData.link.length - 1) {
                     for (let i = 0; i < ddata.data1.length; i++) {
@@ -70,23 +70,35 @@ fetch(betanoUrl).then(res => res.json()).then((data) => {
                         ddata.data1[i] = ddataToJson;
                     }
                     console.log(ddata);
+                    //am pus i=1 deocamdata pentru ca [0] -> este null
+                    for (let i = 0; i < ddata.data1.length; i++) {
+                        if (ddata.data1[i] != null) {
 
+                            copyContainer.childNodes[1].innerHTML = ddata.data1[i].data.event.name + "-> BETANO";
+                            //primele 3 cote   1  X  2
+                            copyContainer.childNodes[3].childNodes[1].childNodes[3].innerHTML = ddata.data1[i].data.event.markets[0].selections[0].price;
+                            // console.log(ddata.data1[i].data.event.markets[0].selections[0].price);
+                            copyContainer.childNodes[3].childNodes[3].childNodes[3].innerHTML = ddata.data1[i].data.event.markets[0].selections[1].price;
+                            copyContainer.childNodes[3].childNodes[5].childNodes[2].innerHTML = ddata.data1[i].data.event.markets[0].selections[2].price;
+                            for (let j = 0; j < ddata.data1[i].data.event.markets.length; j++) {
+
+                                if (ddata.data1[i].data.event.markets[j].name == "Niciun pariu pe egal") {
+                                    copyContainer.childNodes[5].childNodes[1].childNodes[3].innerHTML = ddata.data1[i].data.event.markets[j].selections[0].price;
+                                    copyContainer.childNodes[5].childNodes[5].childNodes[2].innerHTML = ddata.data1[i].data.event.markets[j].selections[1].price;
+                                    body.innerHTML += copyContainer.outerHTML;
+
+                                }
+                                break;
+
+                            }
+                        }
+                    }
                 }
             });
 
 
             // console.log("aici nr obiectului " + vreauJSON.length);
-            for (let i = 0; i < vreauJSON.length; i++) {
-                for (let j = 0; j < vreauJSON[i].events.length; j++) {
 
-                    copyContainer.childNodes[1].innerHTML = vreauJSON[i].events[j].name + "-> BETANO";
-
-                    copyContainer.childNodes[3].childNodes[1].childNodes[3].innerHTML = vreauJSON[i].events[j].markets[0].selections[0].price;
-                    copyContainer.childNodes[3].childNodes[3].childNodes[3].innerHTML = vreauJSON[i].events[j].markets[0].selections[1].price;
-                    copyContainer.childNodes[3].childNodes[5].childNodes[2].innerHTML = vreauJSON[i].events[j].markets[0].selections[2].price;
-                    body.innerHTML += copyContainer.outerHTML;
-                }
-            }
         }
     });
     console.log(copyContainer.childNodes[3].childNodes[5].childNodes[2].innerHTML);
