@@ -33,11 +33,11 @@ fetch(efortunaUrl).then(res => res.json()).then((data) => {
 });
 fetch(betanoUrl1).then(res => res.json()).then((data) => {
     console.log("betano1");
-    var vreauJSON = {
+    // var vreauJSON = {
 
-    };
-    vreauJSON = data;
-    console.log(vreauJSON);
+    // };
+    // vreauJSON = data;
+    console.log(data);
 
 });
 //betano
