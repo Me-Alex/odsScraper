@@ -24,11 +24,11 @@ var asta;
 //efortuna
 fetch(efortunaUrl).then(res => res.json()).then((data) => {
     console.log("EFORTUNA");
-    var vreauJSON = {
+    // var vreauJSON = {
 
-    };
-    vreauJSON = JSON.parse(data);
-    console.log(vreauJSON);
+    // };
+    // vreauJSON = JSON.parse(data);
+    console.log(data);
 
 });
 fetch(betanoUrl1).then(res => res.json()).then((data) => {
