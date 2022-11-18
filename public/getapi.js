@@ -14,7 +14,7 @@
 
 // // httpGet(theUrl);
 
-// let efortunaUrl = "http://localhost:3000/efortuna/";
+let efortunaUrl = "http://localhost:3000/efortuna/";
 // let betanoUrl = "http://localhost:3000/betano/";
 // let betanoUrl1 = "http://localhost:3000/betano1/";
 
@@ -22,15 +22,15 @@
 
 
 // //efortuna
-// fetch(efortunaUrl).then(res => res.json()).then((data) => {
-//     console.log("EFORTUNA");
-//     var vreauJSON = {
+fetch(efortunaUrl).then(res => res.json()).then((data) => {
+    console.log("EFORTUNA");
+    var vreauJSON = {
 
-//     };
-//     vreauJSON = JSON.parse(data);
-//     console.log(vreauJSON);
+    };
+    vreauJSON = JSON.parse(data);
+    console.log(vreauJSON);
 
-// });
+});
 // fetch(betanoUrl1).then(res => res.json()).then((data) => {
 //     console.log("betano1");
 //     var vreauJSON = {
